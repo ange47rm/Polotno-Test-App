@@ -23,24 +23,75 @@ page.set({
 })
 
 page.addElement({
-  x: 50,
-  y: 50,
+  x: 0,
+  y: 0,
   name: "ELEMENT 1",
   type: 'text',
   fill: 'black',
   text: 'Angelo',
   fontWeight: 'bold',
+  align: "center",
+  verticalAlign: "bottom",
 });
 
-page.addElement({
-  x: 100,
-  y: 100,
+const pageOneThird = page.width / 3
+
+const line1 = page.addElement({
+  x: pageOneThird,
+  y: 0,
+  color: 'yellow',
+  width: page.height,
   name: "ELEMENT 2",
-  type: 'text',
-  fill: 'black',
-  text: `This is page ID ${page.id}`,
+  type: 'line',
   fontWeight: 'bold',
-  wrap: "none"
+  wrap: "none",
+  rotation: 90,
+  align: 'center',
+  verticalAlign: 'center',
+});
+
+const line2 = page.addElement({
+  x: pageOneThird * 2,
+  y: 0,
+  color: 'yellow',
+  width: page.height,
+  name: "ELEMENT 2",
+  type: 'line',
+  fontWeight: 'bold',
+  wrap: "none",
+  rotation: 90,
+  align: 'center',
+  verticalAlign: 'center',
+});
+
+const dottedLine1 = page.addElement({
+  x: pageOneThird,
+  y: 0,
+  color: 'grey',
+  width: page.height,
+  name: "ELEMENT 2",
+  type: 'line',
+  fontWeight: 'bold',
+  wrap: "none",
+  rotation: 90,
+  align: 'center',
+  verticalAlign: 'center',
+  dash: [1],
+});
+
+const dottedLine2 = page.addElement({
+  x: pageOneThird * 2,
+  y: 0,
+  color: 'grey',
+  width: page.height,
+  name: "ELEMENT 2",
+  type: 'line',
+  fontWeight: 'bold',
+  wrap: "none",
+  rotation: 90,
+  align: 'center',
+  verticalAlign: 'center',
+  dash: [1],
 });
 
 reaction(
