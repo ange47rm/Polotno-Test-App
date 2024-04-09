@@ -34,6 +34,17 @@ page.addElement({
   verticalAlign: "bottom",
 });
 
+page.addElement({
+  x: 100,
+  y: 100,
+  name: "ELEMENT 2",
+  type: 'text',
+  fill: 'black',
+  text: `This is page ID ${page.id}`,
+  fontWeight: 'bold',
+  wrap: "none"
+});
+
 const pageOneThird = page.width / 3
 
 const line1 = page.addElement({
