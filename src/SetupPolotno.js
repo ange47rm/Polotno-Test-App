@@ -16,7 +16,11 @@ export const store = createStore({
 window.polotnoStore = store;
 
 const page = store.addPage();
-page.set({background: '#FA8072'})
+page.set({
+  background: '#FA8072',
+  width: 1000,
+  height: 1000,
+})
 
 page.addElement({
   x: 50,
